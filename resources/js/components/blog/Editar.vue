@@ -61,6 +61,19 @@ export default {
                 console.log(error)
             })
         }
+        /*
+        Forma alternativa del metodo async actualizar(): sin usar then..
+        // etiquetamos el metodo como async por que usaremos await dentro de ella
+            async actualizar() {
+               try {
+                    await this.axios.put(`/api/blog/${this.$route.params.id}`, this.blog)
+                    this.router.push('/blogs') // notar que tambien puedo mandar el path de la ruta
+               } catch (error) {
+                  console.log(error)
+              }
+            }
+            El detalle de la forma then es que se envia una función  que se ejecuta cuando la promesa es complica y a eso le denominan callback hell cuando se anidan mucho, hasta hay memes al respecto
+        */
     }
 }
 </script>
